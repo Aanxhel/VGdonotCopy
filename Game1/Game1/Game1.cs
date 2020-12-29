@@ -1,6 +1,12 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.GamerServices;
+using Microsoft.Xna.Framework.Media;
+
 
 namespace Game1
 {
@@ -9,9 +15,17 @@ namespace Game1
     /// </summary>
     public class Game1 : Game
     {
+        /***************************************************************************
+         * ambas son necesarias para la cracion del dibujo dentro el videojuego
+         ****************************************************************************/
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+
+
+        /****************************************************************************
+         * Aqui inicia el contructordonde dara vida a nuestro proyecto
+         ****************************************************************************/
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -24,6 +38,8 @@ namespace Game1
         /// related content.  Calling base.Initialize will enumerate through any components
         /// and initialize them as well.
         /// </summary>
+        
+        //metodo de inicializacion
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
