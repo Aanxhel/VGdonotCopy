@@ -4,7 +4,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Media;
 
 
@@ -15,6 +14,20 @@ namespace Game1
     /// </summary>
     public class Game1 : Game
     {
+        /*
+         * colocaremos los sprites primero definiendo el tipo de imagen
+         * en este cado 2D
+         */
+        Texture2D UserTexture;
+
+
+        Vector2 UserPosition;
+
+
+        float UserVelo;
+
+
+
         /***************************************************************************
          * ambas son necesarias para la cracion del dibujo dentro el videojuego
          ****************************************************************************/
@@ -57,6 +70,11 @@ namespace Game1
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+
+            /*
+             * se carga la textura 
+             */
+            UserTexture = Content.Load<Texture2D>("UserTest");
         }
 
         /// <summary>
@@ -92,6 +110,9 @@ namespace Game1
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            spriteBatch.Draw(UserTexture, new Vector2(1, 1), Color.White);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }

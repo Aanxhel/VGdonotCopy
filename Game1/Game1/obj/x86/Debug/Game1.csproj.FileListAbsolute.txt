@@ -21,3 +21,4 @@ D:\Developer\MonoGame\ProyectVGANY\VGdonotCopy\Game1\Game1\obj\x86\Debug\Game1.c
 D:\Developer\MonoGame\ProyectVGANY\VGdonotCopy\Game1\Game1\obj\x86\Debug\Game1.csproj.CopyComplete
 D:\Developer\MonoGame\ProyectVGANY\VGdonotCopy\Game1\Game1\obj\x86\Debug\Game1.exe
 D:\Developer\MonoGame\ProyectVGANY\VGdonotCopy\Game1\Game1\obj\x86\Debug\Game1.pdb
+D:\Developer\MonoGame\ProyectVGANY\VGdonotCopy\Game1\Game1\bin\Windows\x86\Debug\Content\UserTest.xnb
