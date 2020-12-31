@@ -4,9 +4,11 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>D:/Developer/MonoGame/ProyectVGANY/VGdonotCopy/Game1/Game1/Content/enemigoTest.png</File>
     <File>D:/Developer/MonoGame/ProyectVGANY/VGdonotCopy/Game1/Game1/Content/UserTest.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

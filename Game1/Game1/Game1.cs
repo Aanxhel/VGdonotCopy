@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -14,27 +16,19 @@ namespace Game1
     /// </summary>
     public class Game1 : Game
     {
-        /*
-         * colocaremos los sprites primero definiendo el tipo de imagen
-         * en este cado 2D
-         */
-        Texture2D UserTexture;
-
-
-        Vector2 UserPosition;
-
-
-        float UserVelo;
-
-
-
-        /***************************************************************************
+         /***************************************************************************
          * ambas son necesarias para la cracion del dibujo dentro el videojuego
          ****************************************************************************/
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-
+        /*
+        * colocaremos los sprites primero definiendo el tipo de imagen
+        * en este cado 2D
+        */
+        Texture2D   UserTexture,
+                    EnemiTexture;
+        
 
         /****************************************************************************
          * Aqui inicia el contructordonde dara vida a nuestro proyecto
@@ -75,6 +69,7 @@ namespace Game1
              * se carga la textura 
              */
             UserTexture = Content.Load<Texture2D>("UserTest");
+            EnemiTexture = Content.Load<Texture2D>("enemigoTest");
         }
 
         /// <summary>
@@ -111,7 +106,13 @@ namespace Game1
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            spriteBatch.Draw(UserTexture, new Vector2(1, 1), Color.White);
+
+            //en el caso de abajo estamos tomando los atributos de la misma imagen para la altura y ancho
+            spriteBatch.Draw(UserTexture, new Vector2(UserTexture.Width, UserTexture.Height), Color.White);
+            spriteBatch.Draw(EnemiTexture, new Vector2(10, 11), Color.White);
+
+
+
             spriteBatch.End();
 
             base.Draw(gameTime);
