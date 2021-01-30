@@ -28,7 +28,12 @@ namespace Game1
         */
         Texture2D   UserTexture,
                     EnemiTexture;
-        
+
+        Vector2 UserPosX = Vector2.Zero,
+                UserPosY = Vector2.Zero;
+
+        float UserSpeed = 2f;
+
 
         /****************************************************************************
          * Aqui inicia el contructordonde dara vida a nuestro proyecto
@@ -50,6 +55,8 @@ namespace Game1
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+
+
 
             base.Initialize();
         }
@@ -108,7 +115,12 @@ namespace Game1
             spriteBatch.Begin();
 
             //en el caso de abajo estamos tomando los atributos de la misma imagen para la altura y ancho
-            spriteBatch.Draw(UserTexture, new Vector2(UserTexture.Width, UserTexture.Height), Color.White);
+            spriteBatch.Draw(UserTexture,
+                                new Vector2(UserTexture.Width, 
+                                            UserTexture.Height),
+                            Color.White);
+
+            // textura enemigo
             spriteBatch.Draw(EnemiTexture, new Vector2(10, 11), Color.White);
 
 
