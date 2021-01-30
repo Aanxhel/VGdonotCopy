@@ -27,12 +27,16 @@ namespace Game1
         * en este cado 2D
         */
         Texture2D   UserTexture,
-                    EnemiTexture;
+                    UserTextureTransparent,
+                    EnemiTexture,
+                    EnemiTextureTransparent;
 
         Vector2 UserPosX = Vector2.Zero,
                 UserPosY = Vector2.Zero;
 
-        float UserSpeed = 2f;
+        float UserSpeed = 2f,
+              speedTest = 3f;
+
 
 
         /****************************************************************************
